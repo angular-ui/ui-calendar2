@@ -1,0 +1,26 @@
+{
+  "name": "ui-calendar2",
+  "version": "0.0.1",
+  "description": "angularJS native ui-calendar",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular-ui/ui-calendar2.git"
+  },
+  "keywords": [
+    "angularJS",
+    "calendar"
+  ],
+  "author": "Zackary Chapple",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular-ui/ui-calendar2/issues"
+  },
+  "homepage": "https://github.com/angular-ui/ui-calendar2",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  }
+}
