@@ -1,3 +1,4 @@
+/* globals angular */
 'use strict';
 
 var cal2 = angular.module('ui.bootstrap.calendar2', []);
