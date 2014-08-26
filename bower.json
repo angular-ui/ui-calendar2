@@ -15,6 +15,14 @@
     "bower_components",
     "test",
     "tests",
-    "coverage"
-  ]
+    "coverage",
+    "package.json",
+    "Gruntfile.js"
+  ],
+  "dependencies": {
+    "angular": "~1.2.x"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.x"
+  }
 }
