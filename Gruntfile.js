@@ -46,7 +46,7 @@ module.exports = function(grunt) {
   });
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['jshint', 'karma:ci']);
 
   grunt.registerTask('test', ['karma:unit']);
 };
