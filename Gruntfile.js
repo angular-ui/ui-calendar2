@@ -1,29 +1,52 @@
+/* globals module, require */
 'use strict';
 
 module.exports = function(grunt) {
+  // Load grunt tasks automatically
+  require('load-grunt-tasks')(grunt);
 
-    // Project configuration.
-    grunt.initConfig({
-        jshint: {
-            all: [
-                'src/**/*.js',
-                'test/*.js'
-            ],
-            options: {
-                jshintrc: '.jshintrc'
-            }
-        },
+  // Declarations:
+  var KARMA_JASMINE_OPTIONS = {
+    runnerPort: 9999,
+    reporters: ['spec'],
+    frameworks: ['jasmine'],
+    configFile: 'test/karma.conf.js'
+  };
 
-        // Unit tests.
-        nodeunit: {
-            tests: ['test/*_test.js']
-        }
-    });
+  // Project configuration.
+  grunt.initConfig({
+    jshint: {
+      all: [
+        '*.js',
+        'src/**/*.js',
+        'test/**/*.js'
+      ],
+      options: {
+          jshintrc: '.jshintrc'
+      }
+    },
 
-    // These plugins provide necessary tasks.
-    grunt.loadNpmTasks('grunt-contrib-jshint');
+    // Unit tests
+    karma: {
+      unit: {
+        options: KARMA_JASMINE_OPTIONS,
+        browsers: ['PhantomJS', 'Chrome']
+      },
+      all: {
+        options: KARMA_JASMINE_OPTIONS,
+        browsers: ['PhantomJS', 'Chrome', 'Firefox', 'Safari'],
+        singleRun: true
+      },
+      ci: {
+        options: KARMA_JASMINE_OPTIONS,
+        browsers: ['PhantomJS', 'Firefox'],
+        singleRun: true
+      }
+    }
+  });
 
-    // By default, lint and run all tests.
-    grunt.registerTask('default', ['jshint']);
+  // By default, lint and run all tests.
+  grunt.registerTask('default', ['jshint', 'karma:ci']);
 
+  grunt.registerTask('test', ['karma:unit']);
 };
