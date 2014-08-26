@@ -1,9 +1,10 @@
 {
-  "name": "ui-calendar2",
+  "name": "angular-ui-calendar2",
   "version": "0.0.1",
   "homepage": "https://github.com/angular-ui/ui-calendar2",
   "author": "https://github.com/angular-ui/ui-calendar2/graphs/contributors",
   "description": "angularJS native ui-calendar",
+  "license": "MIT",
   "keywords": [
     "angularJS",
     "calendar"
