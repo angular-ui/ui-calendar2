@@ -2,9 +2,7 @@
   "name": "ui-calendar2",
   "version": "0.0.1",
   "homepage": "https://github.com/angular-ui/ui-calendar2",
-  "authors": [
-    "chapplez <zackarychapple30@gmail.com>"
-  ],
+  "author": "https://github.com/angular-ui/ui-calendar2/graphs/contributors",
   "description": "angularJS native ui-calendar",
   "keywords": [
     "angularJS",
@@ -16,6 +14,7 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "coverage"
   ]
 }
