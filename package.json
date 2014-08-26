@@ -4,7 +4,6 @@
   "description": "angularJS native ui-calendar",
   "main": "index.js",
   "scripts": {
-    "postinstall": "bower install",
     "test": "node_modules/karma/bin/karma start test/karma.conf.js --single-run=true"
   },
   "repository": {
